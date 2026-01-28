@@ -1,0 +1,191 @@
+{
+  "azure-deploy": {
+    "description": "Deploy applications to Azure App Service, Azure Functions, and Static Web Apps",
+    "taskType": "deploy",
+    "prompts": [
+      "Create a whiteboard application and deploy to azure",
+      "Create a discussion board and deploy to Azure",
+      "Create a todo list with front end and API an deploy to Azure",
+      "Create a calculator Azure Functions app with blob trigger when the result hits 0"
+    ]
+  },
+  "aca-deployment": {
+    "description": "Deploy containerized applications to Azure Container Apps",
+    "taskType": "deploy",
+    "prompts": [
+     ]
+  },
+  "appinsights-instrumentation": {
+    "description": "Instrument a webapp to send telemetry data to Azure App Insights",
+    "taskType": "codegen",
+    "prompts": [
+     ]
+  },
+  "azure-ai": {
+    "description": "Azure AI Services including AI Search, Speech, Foundry, OpenAI, and Document Intelligence",
+    "taskType": "codegen",
+    "prompts": [
+    ]
+  },
+  "azure-aigateway": {
+    "description": "Configure Azure API Management as an AI Gateway",
+    "taskType": "iac",
+    "prompts": [
+     ]
+  },
+  "azure-cli": {
+    "description": "Install, configure, and use Azure CLI tools (az, azd, func)",
+    "taskType": "analysis",
+    "prompts": [
+    ]
+  },
+  "azure-cosmos-db": {
+    "description": "Build applications with Azure Cosmos DB NoSQL database",
+    "taskType": "iac",
+    "prompts": [
+     ]
+  },
+  "azure-cost-optimization": {
+    "description": "Reduce Azure costs through optimization strategies",
+    "taskType": "analysis",
+    "prompts": [
+    ]
+  },
+  "azure-deployment-preflight": {
+    "description": "Validate Bicep deployments before deploying to Azure",
+    "taskType": "validation",
+    "prompts": [
+    ]
+  },
+  "azure-diagnostics": {
+    "description": "Debug and troubleshoot production issues on Azure",
+    "taskType": "analysis",
+    "prompts": [
+    ]
+  },
+  "azure-functions": {
+    "description": "Serverless event-driven compute with Azure Functions",
+    "taskType": "codegen",
+    "prompts": [
+   ]
+  },
+  "azure-keyvault-expiration-audit": {
+    "description": "Monitor Azure Key Vault for expired or expiring secrets",
+    "taskType": "analysis",
+    "prompts": [
+    ]
+  },
+  "azure-mcp": {
+    "description": "Set up and use Azure MCP server for direct Azure access",
+    "taskType": "config",
+    "prompts": [
+    ]
+  },
+  "azure-networking": {
+    "description": "Azure Networking including VNets, Private Endpoints, and DNS",
+    "taskType": "iac",
+    "prompts": [
+    ]
+  },
+  "azure-nodejs-production": {
+    "description": "Configure Node.js applications for Azure production",
+    "taskType": "codegen",
+    "prompts": [
+    ]
+  },
+  "azure-observability": {
+    "description": "Azure Monitor, Application Insights, and Log Analytics",
+    "taskType": "iac",
+    "prompts": [
+    ]
+  },
+  "azure-performance-troubleshooter": {
+    "description": "Automated performance diagnostics for Azure resources",
+    "taskType": "analysis",
+    "prompts": [
+      "Troubleshoot performance issues in my Azure app",
+      "Analyze latency problems in my resources",
+      "Investigate high CPU usage in my container",
+      "Generate a performance report for my Azure resources",
+      "Diagnose slow response times in my API"
+    ]
+  },
+  "azure-postgres-entra-rbac-setup": {
+    "description": "Set up Entra ID authentication for PostgreSQL",
+    "taskType": "config",
+    "prompts": [
+    ]
+  },
+  "azure-redis": {
+    "description": "Implement caching with Azure Cache for Redis",
+    "taskType": "iac",
+    "prompts": [
+    ]
+  },
+  "azure-resource-visualizer": {
+    "description": "Generate architecture diagrams for Azure resources",
+    "taskType": "analysis",
+    "prompts": [
+    ]
+  },
+  "azure-role-selector": {
+    "description": "Find the right Azure RBAC role for your needs",
+    "taskType": "analysis",
+    "prompts": [
+    ]
+  },
+  "azure-security": {
+    "description": "Azure Security including Key Vault, Managed Identity, and RBAC",
+    "taskType": "iac",
+    "prompts": [
+    ]
+  },
+  "azure-security-hardening": {
+    "description": "Secure Azure resources following Zero Trust principles",
+    "taskType": "iac",
+    "prompts": [
+    ]
+  },
+  "azure-sql-database": {
+    "description": "Build applications with Azure SQL Database",
+    "taskType": "iac",
+    "prompts": [
+    ]
+  },
+  "azure-static-web-apps": {
+    "description": "Deploy static sites with Azure Static Web Apps",
+    "taskType": "deploy",
+    "prompts": [
+    ]
+  },
+  "azure-storage": {
+    "description": "Azure Storage including Blob, Files, Queue, and Table",
+    "taskType": "iac",
+    "prompts": [
+    ]
+  },
+  "azure-validation": {
+    "description": "Pre-deployment validation for Azure resources",
+    "taskType": "validation",
+    "prompts": [
+    ]
+  },
+  "custom-frontend-design": {
+    "description": "Create production-grade frontend interfaces",
+    "taskType": "codegen",
+    "prompts": [
+    ]
+  },
+  "entra-app-registration": {
+    "description": "Microsoft Entra app registration and OAuth",
+    "taskType": "config",
+    "prompts": [
+    ]
+  },
+  "microsoft-foundry": {
+    "description": "Build AI applications with Microsoft Foundry",
+    "taskType": "codegen",
+    "prompts": [
+    ]
+  }
+}

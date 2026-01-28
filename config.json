@@ -1,0 +1,86 @@
+{
+  "copilotCliPath": "copilot",
+  "promptsFile": "./azure-skills-prompts.json",
+  "resultsDir": "./results",
+  "logsDir": "./results/logs",
+  "maxParallelTabs": 5,
+  "timeoutSeconds": 300,
+  "maxRetries": 3,
+  "workingDirectory": ".",
+  "runOrganization": {
+    "enabled": true,
+    "folderFormat": "run_%Y-%m-%d_%H-%M-%S",
+    "collectCopilotLogs": true,
+    "collectSessionState": true,
+    "generateSummary": true
+  },
+  "copilotOptions": {
+    "logLevel": "debug",
+    "model": "claude-opus-4.5",
+    "silent": false,
+    "allowAllTools": true,
+    "noAskUser": true,
+    "noColor": true
+  },
+  "nonInteractive": {
+    "enabled": true,
+    "azDefaults": {
+      "AZURE_CORE_NO_PROMPT": "true",
+      "AZURE_CORE_ONLY_SHOW_ERRORS": "false",
+      "AZURE_CORE_OUTPUT": "json"
+    },
+    "azdDefaults": {
+      "AZURE_DEV_COLLECT_TELEMETRY": "no",
+      "AZD_DEBUG": "false"
+    },
+    "commonFlags": {
+      "az": ["--only-show-errors", "--output", "json"],
+      "azd": ["--no-prompt"]
+    },
+    "autoResponses": {
+      "y/n": "y",
+      "yes/no": "yes",
+      "continue": "y",
+      "proceed": "y"
+    }
+  },
+  "authInheritance": {
+    "_comment": "Copilot CLI inherits Azure credentials from parent shell. Ensure 'az login' before running.",
+    "requireAzLogin": true,
+    "requireAzdLogin": false,
+    "preRunCheck": true,
+    "envVarsToInherit": [
+      "AZURE_SUBSCRIPTION_ID",
+      "AZURE_TENANT_ID", 
+      "AZURE_CLIENT_ID",
+      "AZURE_CLIENT_SECRET",
+      "AZURE_DEFAULTS_GROUP",
+      "AZURE_DEFAULTS_LOCATION"
+    ]
+  },
+  "successIndicators": [
+    "completed successfully",
+    "done",
+    "created",
+    "deployed",
+    "generated",
+    "finished",
+    "succeeded"
+  ],
+  "failureIndicators": [
+    "error:",
+    "failed",
+    "exception",
+    "unable to",
+    "could not",
+    "not found",
+    "denied"
+  ],
+  "logging": {
+    "captureStdout": true,
+    "captureStderr": true,
+    "includeTimestamps": true,
+    "maxOutputSize": 1048576,
+    "captureCopilotLogs": true
+  }
+}

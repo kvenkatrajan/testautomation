@@ -1,0 +1,29 @@
+# Exclude specified folders
+calculator-functions/
+debate-prep-app/
+discussion-board/
+results/
+todo-app/
+whiteboard-app/
+
+# Exclude specific file
+azure-skills-prompts - Copy.json
+
+# Build and dependencies
+node_modules/
+
+# Logs
+*.log
+
+# Evaluation scripts
+eval_*.ps1
+eval_*.bat
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# IDE
+.vscode/
+.idea/
