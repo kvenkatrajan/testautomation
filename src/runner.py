@@ -1025,16 +1025,10 @@ class CopilotCliRunner:
         
         # Azure service URL patterns
         url_patterns = [
-            # AZD endpoint patterns (from azd up/deploy output)
-            (r'[-\*]\s*Endpoint:\s*(https://[a-z0-9\-]+\.(?:\d+\.)?azurestaticapps\.net[^\s\)]*)', 'Azure Static Web App (azd)'),
-            (r'[-\*]\s*Endpoint:\s*(https://[a-z0-9\-]+\.azurewebsites\.net/api/[^\s\)]*)', 'Azure Function (azd)'),
-            (r'[-\*]\s*Endpoint:\s*(https://[a-z0-9\-]+\.azurewebsites\.net[^\s\)]*)', 'Azure App Service (azd)'),
-            (r'[-\*]\s*Endpoint:\s*(https://[a-z0-9\-]+\.[a-z0-9\-]+\.azurecontainerapps\.io[^\s\)]*)', 'Azure Container App (azd)'),
-            (r'[-\*]\s*Endpoint:\s*(https://[a-z0-9\-]+\.azurefd\.net[^\s\)]*)', 'Azure Front Door (azd)'),
             # Static Web Apps
             (r'https://[a-z0-9\-]+\.(?:\d+\.)?azurestaticapps\.net/?[^\s\)\]\"\'\`]*', 'Azure Static Web App'),
             # App Service / Web Apps
-            (r'https://[a-z0-9\-]+\.azurewebsites\.net/?[^\s\)\]\"\'\`]*', 'Azure App Service'),
+            (r'https?://[a-z0-9\-]+\.azurewebsites\.net/?[^\s\)\]\"\'\`]*', 'Azure App Service'),
             # Azure Functions
             (r'https://[a-z0-9\-]+\.azurewebsites\.net/api/[^\s\)\]\"\'\`]*', 'Azure Function'),
             # Container Apps
@@ -1059,9 +1053,6 @@ class CopilotCliRunner:
         
         for pattern, service_type in url_patterns:
             for match in re.finditer(pattern, content, re.IGNORECASE):
-                # For azd patterns with capture groups, extract the URL from group(1)
-                url = match.group(1) if match.lastindex else match.group(0)
-                url = url.rstrip('.,;:')
                 if url not in seen:
                     seen.add(url)
                     urls.append({
